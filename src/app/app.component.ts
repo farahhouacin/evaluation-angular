@@ -8,13 +8,16 @@ import { Statistique } from './models/statistique';
 })
 export class AppComponent {
   title = 'evaluation-angular';
-    
-  stat1: Statistique = new Statistique("12345", "stat1", "12");
-  
-  stat2: Statistique = new Statistique("67890", "stat2", "57");
  
-  constructor(){
+  statistiques: Statistique[] = [
+    new Statistique("12345", "stat1", "12"),
+    new Statistique("67890", "stat2", "57")];
 
-  }
+    constructor(){
+      setTimeout(() => {
+        this.statistiques.push(new Statistique("75314", "stat3", "98"));
+      }, 2000);
+    }
+
   
 }

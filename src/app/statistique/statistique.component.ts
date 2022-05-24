@@ -8,7 +8,7 @@ import { Statistique } from '../models/statistique';
 })
 export class StatistiqueComponent implements OnInit {
   
-  @Input() statistique!: Statistique;
+  @Input() uneStat!: Statistique;
 
   constructor() { }
 
